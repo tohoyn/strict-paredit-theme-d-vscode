@@ -94,4 +94,6 @@ ctrl+alt+x ctrl+alt+right     | Cut Close List
 
 ## Maintainers
 
+The strict-paredit-theme-d-vscode project is maintained by Tommi Höynälänmaa.
+
 The strict-paredit-vscode project is forked from https://github.com/BetterThanTomorrow/calva-paredit. Original one is maintained by author Peter Strömberg as part of project calva, https://github.com/BetterThanTomorrow/calva.
