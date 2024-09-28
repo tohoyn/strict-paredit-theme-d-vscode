@@ -1,0 +1,522 @@
+{
+    "name": "strict-paredit-theme-d",
+    "displayName": "Strict Paredit Theme-D",
+    "description": "Classic strict paredit for Theme-D: structural editing and navigation",
+    "version": "1.0.0",
+    "icon": "assets/paredit.png",
+    "publisher": "tohoyn",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.20.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Formatters",
+        "Other"
+    ],
+    "keywords": [
+        "lisp",
+        "scheme",
+        "theme-d",
+        "brackets",
+        "paredit"
+    ],
+    "galleryBanner": {
+        "color": "#344D81",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tohoyn/strict-paredit-theme-d-vscode"
+    },
+    "activationEvents": [
+        "onLanguage:theme-d",
+        "onCommand:paredit-theme-d.openList",
+        "onCommand:paredit-theme-d.forwardSexp",
+        "onCommand:paredit-theme-d.backwardSexp",
+        "onCommand:paredit-theme-d.forwardDownSexp",
+        "onCommand:paredit-theme-d.backwardUpSexp",
+        "onCommand:paredit-theme-d.sexpRangeExpansion",
+        "onCommand:paredit-theme-d.sexpRangeContracrion",
+        "onCommand:paredit-theme-d.closeList",
+        "onCommand:paredit-theme-d.closeList2",
+        "onCommand:paredit-theme-d.rangeForDefun",
+        "onCommand:paredit-theme-d.slurpSexpForward",
+        "onCommand:paredit-theme-d.slurpSexpBackward",
+        "onCommand:paredit-theme-d.barfSexpForward",
+        "onCommand:paredit-theme-d.barfSexpBackward",
+        "onCommand:paredit-theme-d.spliceSexp",
+        "onCommand:paredit-theme-d.splitSexp",
+        "onCommand:paredit-theme-d.killSexpForward",
+        "onCommand:paredit-theme-d.killSexpBackward",
+        "onCommand:paredit-theme-d.spliceSexpKillForward",
+        "onCommand:paredit-theme-d.spliceSexpKillBackward",
+        "onCommand:paredit-theme-d.deleteForward",
+        "onCommand:paredit-theme-d.deleteBackward",
+        "onCommand:paredit-theme-d.wrapAroundParens",
+        "onCommand:paredit-theme-d.wrapAroundSquare",
+        "onCommand:paredit-theme-d.wrapAroundCurly",
+        "onCommand:paredit-theme-d.indentRange",
+        "onCommand:paredit-theme-d.transpose"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "configuration": [
+            {
+                "title": "Paredit Theme-D",
+                "type": "object",
+                "properties": {
+                    "paredit_theme_d.defaultKeyMap": {
+                        "type": "string",
+                        "description": "The default keymap to use for bindings when there is no custom binding.",
+                        "default": "original",
+                        "enum": [
+                            "strict",
+                            "original",
+                            "none"
+                        ],
+                        "scope": "window"
+                    }
+                }
+            }
+        ],
+        "commands": [
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.openList",
+                "title": "Open List"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.toggle",
+                "title": "Toggle"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.forwardSexp",
+                "title": "Forward Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.backwardSexp",
+                "title": "Backward Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.forwardDownSexp",
+                "title": "Down Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.backwardUpSexp",
+                "title": "Up Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.closeList",
+                "title": "Close List"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.closeList2",
+                "title": "Go to list close in strict mode"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.rangeForDefun",
+                "title": "Select Current Top Level Form"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.sexpRangeExpansion",
+                "title": "Expand Selection"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.sexpRangeContraction",
+                "title": "Shrink Selection"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.yankForwardSexp",
+                "title": "Copy Forward Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.yankBackwardSexp",
+                "title": "Copy Backward Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.yankForwardDownSexp",
+                "title": "Copy Down Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.yankBackwardUpSexp",
+                "title": "Copy Up Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.yankCloseList",
+                "title": "Copy Close List"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.yankRangeForDefun",
+                "title": "Copy Current Top Level Form"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.cutForwardSexp",
+                "title": "Cut Forward Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.cutBackwardSexp",
+                "title": "Cut Backward Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.cutForwardDownSexp",
+                "title": "Cut Down Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.cutBackwardUpSexp",
+                "title": "Cut Up Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.cutCloseList",
+                "title": "Cut Close List"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.cutRangeForDefun",
+                "title": "Cut Select Current Top Level Form"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.slurpSexpForward",
+                "title": "Slurp Sexp Forward"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.slurpSexpBackward",
+                "title": "Slurp Sexp Backward"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.barfSexpForward",
+                "title": "Barf Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.barfSexpBackward",
+                "title": "Barf Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.spliceSexp",
+                "title": "Splice Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.splitSexp",
+                "title": "Split Sexp"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.killSexpForward",
+                "title": "Kill Sexp Forward"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.killSexpBackward",
+                "title": "Kill Sexp Backward"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.spliceSexpKillForward",
+                "title": "Splice & Kill Forward"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.spliceSexpKillBackward",
+                "title": "Splice & Kill Backward"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.deleteForward",
+                "title": "Delete Forward"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.deleteBackward",
+                "title": "Delete Backward"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.wrapAroundParens",
+                "title": "Wrap Around ()"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.wrapAroundSquare",
+                "title": "Wrap Around []"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.wrapAroundCurly",
+                "title": "Wrap Around {}"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.indentRange",
+                "title": "Indent"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.indentRangeNoMessage",
+                "title": "Indent Without Message"
+            },
+            {
+                "category": "Paredit Theme-D",
+                "command": "paredit_theme_d.transpose",
+                "title": "Transpose"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "paredit_theme_d.closeList2",
+                "key": "shift+0",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap == strict && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.forwardSexp",
+                "key": "ctrl+right",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.backwardSexp",
+                "key": "ctrl+left",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.forwardDownSexp",
+                "key": "ctrl+down",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.backwardUpSexp",
+                "key": "ctrl+up",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.closeList",
+                "key": "ctrl+alt+right",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap == original && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.rangeForDefun",
+                "key": "ctrl+alt+w",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.sexpRangeExpansion",
+                "key": "ctrl+w",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.sexpRangeContraction",
+                "key": "ctrl+shift+w",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.yankForwardSexp",
+                "key": "ctrl+alt+c ctrl+right",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.yankBackwardSexp",
+                "key": "ctrl+alt+c ctrl+left",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.yankForwardDownSexp",
+                "key": "ctrl+alt+c ctrl+down",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.yankBackwardUpSexp",
+                "key": "ctrl+alt+c ctrl+up",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.yankCloseList",
+                "key": "ctrl+alt+c ctrl+alt+right",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.yankRangeForDefun",
+                "key": "ctrl+alt+c space",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.cutForwardSexp",
+                "key": "ctrl+alt+x ccutright",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.cutBackwardSexp",
+                "key": "ctrl+alt+x ccutleft",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.cutForwardDownSexp",
+                "key": "ctrl+alt+x ccutdown",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.cutBackwardUpSexp",
+                "key": "ctrl+alt+x ccutup",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.cutCloseList",
+                "key": "ctrl+alt+x ctrl+alt+right",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.cutRangeForDefun",
+                "key": "ctrl+alt+x space",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.slurpSexpForward",
+                "key": "ctrl+alt+.",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.slurpSexpBackward",
+                "key": "ctrl+alt+shift+.",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.barfSexpForward",
+                "key": "ctrl+alt+,",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.barfSexpBackward",
+                "key": "ctrl+alt+shift+,",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.spliceSexp",
+                "key": "ctrl+alt+s",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.splitSexp",
+                "key": "ctrl+alt+shift+s",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.killSexpForward",
+                "key": "ctrl+delete",
+                "mac": "ctrl+shift+backspace",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.killSexpBackward",
+                "key": "ctrl+backspace",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.spliceSexpKillForward",
+                "key": "ctrl+alt+down",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.spliceSexpKillBackward",
+                "key": "ctrl+alt+up",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.wrapAroundParens",
+                "key": "ctrl+alt+shift+9",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.wrapAroundSquare",
+                "key": "ctrl+alt+[",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.wrapAroundCurly",
+                "key": "ctrl+alt+shift+[",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.indentRange",
+                "key": "ctrl+alt+i",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.indentRangeNoMessage",
+                "key": "ctrl+alt+j",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.deleteForward",
+                "key": "delete",
+                "mac": "shift+backspace",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap == strict && editorTextFocus && !editorReadOnly && !editorHasMultipleSelections"
+            },
+            {
+                "command": "paredit_theme_d.deleteBackward",
+                "key": "backspace",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap == strict && editorTextFocus && !editorReadOnly && !editorHasMultipleSelections"
+            },
+            {
+                "command": "paredit_theme_d.openList",
+                "key": "(",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap == strict && editorTextFocus && !editorReadOnly && !editorHasMultipleSelections"
+            },
+            {
+                "command": "deleteRight",
+                "key": "ctrl+alt+delete",
+                "mac": "alt+shift+backspace",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap == strict && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "deleteLeft",
+                "key": "ctrl+alt+backspace",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap == strict && editorTextFocus && !editorReadOnly"
+            },
+            {
+                "command": "paredit_theme_d.transpose",
+                "key": "ctrl+alt+t",
+                "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "dependencies": {
+        "clipboardy": "^1.2.3",
+        "paredit-theme-d.js": "^0.3.4"
+    },
+    "devDependencies": {
+        "@types/mocha": "^5.2.5",
+        "@types/node": "^10.11.5",
+        "mocha": "^5.2.0",
+        "typescript": "^3.1.1",
+        "vscode": "^1.1.18"
+    }
+}
