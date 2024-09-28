@@ -7,7 +7,7 @@ Classic, Emacs Paredit-like Structural editing and navigation for Theme-D. This 
 <a href=""><img width="128px" height="128px" src="https://github.com/ailisp/strict-paredit-vscode/raw/master/assets/paredit.png" title="Paredit icon"></img></a>
 </p>
 
-This is a [Paredit](http://mumble.net/~campbell/emacs/paredit.el) extension for [Visual Studio Code](https://code.visualstudio.com). It is a thin wrapper around [paredit-theme-d.js](https://github.com/tohoyn/paredit-theme-d.js).
+This is a [Paredit Theme-D](http://mumble.net/~campbell/emacs/paredit.el) extension for [Visual Studio Code](https://code.visualstudio.com). It is a thin wrapper around [paredit-theme-d.js](https://github.com/tohoyn/paredit-theme-d.js).
 
 ## Commands
 

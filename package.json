@@ -1,8 +1,8 @@
 {
-    "name": "strict-paredit-theme-d",
+    "name": "strict-paredit-theme-d-vscode",
     "displayName": "Strict Paredit Theme-D",
     "description": "Classic strict paredit for Theme-D: structural editing and navigation",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icon": "assets/paredit.png",
     "publisher": "tohoyn",
     "license": "MIT",
