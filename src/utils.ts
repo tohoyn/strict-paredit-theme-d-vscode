@@ -1,6 +1,6 @@
 'use strict';
 import { TextEditor, Selection, Range } from 'vscode';
-import * as clipboardy from 'clipboardy';
+// import * as clipboardy from 'clipboardy';
 import * as vscode from 'vscode';
 
 

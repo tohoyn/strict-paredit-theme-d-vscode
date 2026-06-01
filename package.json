@@ -2,7 +2,7 @@
     "name": "strict-paredit-theme-d-vscode",
     "displayName": "Strict Paredit Theme-D",
     "description": "Classic strict paredit for Theme-D: structural editing and navigation",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "icon": "assets/paredit.png",
     "publisher": "tohoyn2",
     "license": "MIT",
@@ -509,8 +509,7 @@
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
     "dependencies": {
-        "clipboardy": "^1.2.3",
-        "paredit-theme-d.js": "^0.3.4"
+        "paredit-theme-d.js": "github:tohoyn/paredit-theme-d.js"
     },
     "devDependencies": {
         "@types/mocha": "^5.2.5",

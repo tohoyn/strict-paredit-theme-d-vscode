@@ -1,3 +1,6 @@
+## 1.0.3
+- Removed dependency to module clipboardy.
+
 ## 1.0.2 - 2024-10-03
 Changed:
 - Changed the publisher to tohoyn2 in package.json.
