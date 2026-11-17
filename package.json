@@ -2,7 +2,7 @@
     "name": "strict-paredit-theme-d-vscode",
     "displayName": "Strict Paredit Theme-D",
     "description": "Classic strict paredit for Theme-D: structural editing and navigation",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "icon": "assets/paredit.png",
     "publisher": "tohoyn2",
     "license": "MIT",
@@ -461,7 +461,7 @@
             },
             {
                 "command": "paredit_theme_d.indentRange",
-                "key": "ctrl+alt+i",
+                "key": "ctrl+i",
                 "when": "editorLangId =~ /theme-d/ && paredit_theme_d:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
             },
             {

@@ -53,7 +53,7 @@ ctrl+alt+down                     | Splice & Kill Forward
 ctrl+alt+9, Ctrl+alt+(            | Wrap Around ()
 ctrl+alt+[                        | Wrap Around []
 ctrl+alt+{                        | Wrap Around {}
-ctrl+alt+i                        | Indent
+ctrl+i                        | Indent
 ctrl+alt+j                        | Indent without a Message
 ctrl+alt+t                        | Transpose
 
