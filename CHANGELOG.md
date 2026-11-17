@@ -1,3 +1,6 @@
+## 1.0.5
+- Changed the icon.
+
 ## 1.0.4
 - Changed key ctrl+alt+i to ctrl+i for range indentation.
 
